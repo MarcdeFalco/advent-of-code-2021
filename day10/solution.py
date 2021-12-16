@@ -40,7 +40,6 @@ for l in s.split('\n'):
         sum2.append(sc)
 
 sum2.sort()
-sum2[len(sum2)//2]
 print('Part1',  sum1)
 print('Part2',  sum2[len(sum2)//2])
 

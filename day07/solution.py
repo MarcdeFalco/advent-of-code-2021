@@ -4,8 +4,10 @@ from speedaoc import AOC
 
 aoc = AOC(8)
 
-s = aoc.example #the daily input is stored in s
+#the daily input is stored in s
+s = aoc.example 
 s = aoc.input 
+part2 = True
 
 pos = list(map(int, s.split(',')))
 
@@ -16,12 +18,14 @@ for i in range(m):
     c = 0
     for p in pos:
         d =  abs(p-i)
-        c += (d*(d+1))//2
+        if part2:
+            c += (d*(d+1))//2
+        else:
+            c += d
     costs.append(c)
 tgt = min(costs)
-print(costs.index(tgt))
 print(tgt)
 
 ans = tgt
 
-aoc.submit(2, ans)
+#aoc.submit(2, ans)

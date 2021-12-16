@@ -122,4 +122,4 @@ for i in range(N):
 ans = num
 print(ans)
 
-aoc.submit(2, ans)
+#aoc.submit(2, ans)
